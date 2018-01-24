@@ -1,0 +1,15 @@
+
+# This 8 bit or one byte number of ones and zeros is machine code and 
+# it will be stored in ram. It will be executed by cpu by point the program 
+# counter at different places.  If you are just inputting number use LDI or 00000100
+         # This style of code (LID R0 37) is assembly code which is slightly higher level of machine code which is just 1s and 0s
+00000100 # LDI R0,37  LDI = means loads immediate and it saves this number 37 in registry 0. This first 8 bit number literally stands for the instruction type which in this case is LDI
+00000000 # this is registry 0; Only 8 register available so only 3 bits maximum
+00100101 # 37 - thi is number 37. 
+00001010 # PUSH R0 - This is the push instruction 
+00000000 # registry 0 
+00001011 # POP R1
+00000001
+00000110 # PRN r0
+00000000
+00011011 # HLT           

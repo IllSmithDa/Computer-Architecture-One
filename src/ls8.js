@@ -79,7 +79,9 @@ function onFileLoaded(cpu) {
 let ram = new RAM(256);
 let cpu = new CPU(ram);
 
-// Get remaining command line arguments
+// Get remaining command line arguments and even include the name of the
+// program you are running. Slice cuts all of that off so we only get what 
+// we need
 const argv = process.argv.slice(2);
 
 // Check arguments
