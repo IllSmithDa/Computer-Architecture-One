@@ -62,3 +62,71 @@
 
 * Suggest the role that graphics cards play in machine learning.
   GPUs are used to train these deep neural networks using far larger training sets, in an order of magnitude less time, usingfar less datacenter infrastructure.  GPUs are also being used torun these trained machine learning models to do classificationand prediction in the cloud, supporting far more data volume and throughput with less power and infrastructure.
+
+
+  The minimum seek time for an HDD is 9msec, and the maximum seek time is 90msec. The blocksize of this HDD is 4KB. How long on average does it take to read 100MB of data?
+
+  Describe a TCP/IP packet in detail. Describe the header, how many bytes it is, and whichcomponents it contains. What data can come after the header?
+
+  How does the network protocol guarantee that a TCP/IP packet is complete aftertransmission?
+
+  What is the difference between TCP and IP?
+  Internet Protocol(IP) is the principal communications protocol in the internet protocol 
+  suite for relaying datagrams across network boundaries. Its routing function entables 
+  internetworking, and essentially establishes the internet. IP delivers packets from source 
+  host to the destination host soley based on IP addresses in the packet headers. IP defines format of a payload in a packet with a header is called encapsulation. The Tansmission Control Protocol is the other main protocol of the internet protocol suite. TCP provides reliable, ordered, and error-checked delivery of a stream of octets between applications running on hosts communicating by an IP network. Major internet applications such as the World Wide Web, email, remote administration, and file transfer rely on TCP. TCP povides a commuinication service at an intermediate lefvel between an application program and the internet protocol. It provides host to host connectivity at the transport layer of the internet model. An application does not need to know the particular mechanisms for sending data via a link to another host such as the required packet fragmentation on the transmission medium. The TCP makes sure that the data a computer recieves is correct and it came in the correct expected order or the packets came in the correct order. The TCP lives on OSI 4, IP lives on OSI 3
+
+  Why is 3d performance so much higher with a graphics card than without? Modern CPUs areextremely fast, what is limiting their performance?
+
+  
+
+    Explain how the CPU provides concurrency:
+
+    Describe assembly language and machine language:
+
+    Suggest the role that graphics cards play in machine learning:
+
+
+  How do you multiply bits? 
+
+  1001001 * 2 = 10010010;
+  100100100 / 2 = 10010010;
+
+  How to test for the nth bit?
+    See if the nth bit of x is on: 
+    x = 136;
+    n = 4;
+    76543210
+    11011100 ->
+    1101 | 1100 | 4 bits shifted here
+    >> 4      // shift by 4 bits which means last 4 bits shifted off
+    00001101  // 4th bit now in the place of the 1st bit 
+    00000001  // maked here 
+    --------
+    00000001 // result here which is the mask interrupt and allows 
+             // us to figure which interrupt was triggered and which 
+             // ones fired
+    e.g
+    shift this by 4 bits, mask it and see if it is 1 or 0
+    (((x >> n) & 1) == 1({
+      console.log(the 4th bit is set!)
+    }
+
+     <-- n << n
+    n = 4
+    00010000
+
+    n = 3
+    00001000
+    
+    n = 2
+    00000100
+    
+    n = 1
+    00000010   <-- 1 << 1
+    
+    n = 0
+    00000001   <-- 0 << 0
+
+
+ 

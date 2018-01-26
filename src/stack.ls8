@@ -13,3 +13,9 @@
 00000110 # PRN r0
 00000000
 00011011 # HLT           
+
+# The Pointer (SP) is a number what was an address in memory. F7 is the top of the stack 
+# and or at address F8 if stack is empty. This basically means having a number stored in the 
+# register. The register is different from the machine code instruction set. Register is a 
+# big array of ram and records what the top of the stack in ram. Records the address at the 
+# top of the stack

@@ -2,6 +2,7 @@
 const fs = require('fs');
 const RAM = require('./ram');
 const CPU = require('./cpu');
+const KEYBOARD = require('./keyboard');
 
 /**
  * Process a loaded file
@@ -69,6 +70,7 @@ function loadFile(filename, cpu, onComplete) {
  * CPU is set up, start it running
  */
 function onFileLoaded(cpu) {
+    // things start to happen here
     cpu.startClock();
 }
 
@@ -78,6 +80,8 @@ function onFileLoaded(cpu) {
 
 let ram = new RAM(256);
 let cpu = new CPU(ram);
+let keyboard = new KEYBOARD();
+keyboard.connectToCPU(cpu);
 
 // Get remaining command line arguments and even include the name of the
 // program you are running. Slice cuts all of that off so we only get what 
@@ -89,7 +93,7 @@ if (argv.length === 0) {
     // Read from stdin
     loadFileFromStdin(cpu, onFileLoaded);
 } else if (argv.length == 1) {
-    // Read from file
+    // Read from file and onFileLoaded is what we call when we are done.
     loadFile(argv[0], cpu, onFileLoaded);
 } else {
     console.error('usage: ls8 [machinecodefile]');
